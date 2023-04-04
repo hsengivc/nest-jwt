@@ -16,7 +16,7 @@ import {
   Public,
 } from 'src/common/decorators';
 
-@Controller('auth')
+@Controller('auth/v1')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
