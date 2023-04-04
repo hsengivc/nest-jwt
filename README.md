@@ -6,7 +6,7 @@ This is a simple authentication service that provides sign up, sign in, and logo
 
 To run this authentication service, you will need the following installed on your machine:
 
-- Node.js (v18 or later)
+- Node.js (v18.15.0 LTS or later)
 - yarn (v1.22.19 or later)
 - PostgreSQL (v12 or later)
 
@@ -23,4 +23,30 @@ Install the dependencies:
 ```markdown
 cd nest-jwt
 yarn install
+```
+
+Run the Docker compose
+
+```markdown
+docker compose up
+```
+
+Prisma migration and DB push
+
+```markdown
+npx prisma migrate dev --create-only
+
+npx prisma db push
+```
+
+View the database using Prisma Studio
+
+```markdown
+npx prisma studio
+```
+
+Start the application
+
+```markdown
+yarn start
 ```
