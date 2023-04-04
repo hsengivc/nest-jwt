@@ -9,6 +9,7 @@ To run this authentication service, you will need the following installed on you
 - Node.js (v18.15.0 LTS or later)
 - yarn (v1.22.19 or later)
 - PostgreSQL (v12 or later)
+- Docker Desktop
 
 Installation
 
@@ -24,6 +25,8 @@ Install the dependencies:
 cd nest-jwt
 yarn install
 ```
+
+Rename .env.copy file to .env and update the necessary keys and credentials
 
 Run the Docker compose
 
