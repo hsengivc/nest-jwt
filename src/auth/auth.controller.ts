@@ -4,15 +4,12 @@ import {
   HttpCode,
   HttpStatus,
   Post,
-  Req,
   UseGuards,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto';
 import { Tokens } from './types';
-import { AuthGuard } from '@nestjs/passport';
-import { Request } from 'express';
-import { AtGuard, RtGuard } from 'src/common/guards';
+import { RtGuard } from 'src/common/guards';
 import {
   GetCurrentUser,
   GetCurrentUserId,

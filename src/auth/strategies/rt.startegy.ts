@@ -4,11 +4,14 @@ import { Request } from 'express';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class RtStrategy extends PassportStrategy(Strategy, 'jwt-refresh') {
+export class RtStrategy extends PassportStrategy(
+  Strategy,
+  process.env.REFRESH_GUARD_KEY,
+) {
   constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      secretOrKey: 'rt-secret',
+      secretOrKey: process.env.REFRESH_TOKEN_SECRET_KEY,
       passReqToCallback: true,
     });
   }

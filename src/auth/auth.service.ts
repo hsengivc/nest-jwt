@@ -99,7 +99,7 @@ export class AuthService {
           email,
         },
         {
-          secret: 'at-secret',
+          secret: process.env.ACCESS_TOKEN_SECRET_KEY,
           expiresIn: 60 * 15, //15mins
         },
       ),
@@ -109,7 +109,7 @@ export class AuthService {
           email,
         },
         {
-          secret: 'rt-secret',
+          secret: process.env.REFRESH_TOKEN_SECRET_KEY,
           expiresIn: 60 * 60 * 24 * 7, //1 week
         },
       ),
