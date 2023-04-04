@@ -131,3 +131,7 @@ Response body:
     "message": "Session revoked"
 }
 ```
+Future updates:
+- Logger
+- Dockerizing
+- Unit test
