@@ -53,3 +53,81 @@ Start the application
 ```markdown
 yarn start
 ```
+
+API Endpoints
+
+POST /auth/v1/signup
+<br />
+Creates a new user account.
+
+Request body:
+```json
+{
+    "email": "email@email.com",
+    "password": "password123"
+}
+```
+
+Response body:
+```json
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiO...",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIi..."
+}
+```
+
+POST /auth/v1/signin
+<br />
+Authenticates a user and creates a new session.
+
+Request body:
+```json
+{
+    "email": "email@email.com",
+    "password": "password123"
+}
+```
+
+Response body:
+```json
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiO...",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIi..."
+}
+```
+
+POST /auth/v1/logout
+<br />
+Revokes the current user's session.
+
+Request body:
+```json
+{
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIi..."
+}
+```
+
+Response body:
+```json
+{
+    "message": "Session revoked"
+}
+```
+
+POST /auth/v1/refresh
+<br />
+Refresh the current user's session.
+
+Request body:
+```json
+{
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIi..."
+}
+```
+
+Response body:
+```json
+{
+    "message": "Session revoked"
+}
+```
